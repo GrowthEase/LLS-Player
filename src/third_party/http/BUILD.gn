@@ -1,0 +1,17 @@
+static_library("rtd_http") {
+  include_dirs = [ "libcurl/include" ]
+  sources = [
+    "src/rtd_http.cpp",
+    "src/rtd_http.h"
+  ]
+
+  if (is_win) {
+    if (current_cpu == "x86") {
+      lib_dirs = [ "libcurl/libs/win32" ]
+      libs = [ "libcurl.lib" ]
+    } else if (current_cpu == "x64") {
+      lib_dirs = [ "libcurl/libs/win64" ]
+      libs = [ "libcurl.lib" ]
+    }
+  }
+}
