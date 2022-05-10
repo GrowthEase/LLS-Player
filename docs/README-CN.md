@@ -44,9 +44,9 @@ SDK主要分为3个模块：
 
 ## 扫码加入网易智企开源交流群
 
-![图片文字描述](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E7%A4%BE%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81-5.9.jpg)
+![社群二维码](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E7%A4%BE%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81-5.9.jpg)
 
 ## 扫码添加网易智企开源小助理
 
-![图片文字描述](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E5%B0%8F%E5%8A%A9%E7%90%86%E5%BE%AE%E4%BF%A1%E5%8F%B7.jpg)
+![小助理微信号](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E5%B0%8F%E5%8A%A9%E7%90%86%E5%BE%AE%E4%BF%A1%E5%8F%B7.jpg)
 
