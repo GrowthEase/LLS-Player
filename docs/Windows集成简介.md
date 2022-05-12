@@ -20,7 +20,13 @@ set vs2019_install=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
 
 谷歌官方下载地址： https://storage.googleapis.com/chrome-infra/depot_tools.zip
 
-**depot_tools** 解压后，添加到环境变量path中
+**depot_tools** 解压后，进入目录，打开cmd，执行如下命令来安装一些基础库
+
+```
+gclient
+```
+
+安装完成后将路径添加到环境变量path中
 
 添加环境变量
 
