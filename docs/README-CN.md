@@ -42,9 +42,6 @@ SDK主要分为3个模块：
 
 [Windows集成方式](https://github.com/GrowthEase/LLS-Player/blob/main/docs/Windows集成简介.md)
 
-## 扫码加入网易智企开源交流群
-
-![社群二维码](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E5%BE%AE%E4%BF%A1%E7%BE%A4-516.png)
 
 ## 扫码添加网易智企开源小助理
 
