@@ -13,6 +13,7 @@ The SDK provides a set of simple and easy-to-use interfaces, allowing developers
 - Low-latency pull streaming, and high anti-weak network performance
 - Support OPUS and AAC, of which AAC supports ADTS and LATM, including AAC-LC, AAC-HE, AAC-HEv2
 - Support H264
+- Support WHIP
 - Video callback H264 bit stream, audio callback PCM data
 - Support Windows platform
 

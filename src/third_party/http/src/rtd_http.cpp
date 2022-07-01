@@ -19,7 +19,7 @@
 
 int RtdHttp::count_ = 0;
 
-RtdHttp::RtdHttp(const std::string & url, int timeout) 
+RtdHttp::RtdHttp(const std::string & url, int timeout, int conn_timeout_ms) 
     : url_(url) {
   if (count_++ == 0) {
     curl_global_init(CURL_GLOBAL_ALL);
@@ -33,6 +33,8 @@ RtdHttp::RtdHttp(const std::string & url, int timeout)
   if (timeout > 0) {
     curl_easy_setopt(curl_handle_, CURLOPT_NOSIGNAL, 1L);
     curl_easy_setopt(curl_handle_, CURLOPT_TIMEOUT_MS, timeout);
+    curl_easy_setopt(curl_handle_, CURLOPT_CONNECTTIMEOUT_MS, conn_timeout_ms);
+    curl_easy_setopt(curl_handle_, CURLOPT_VERBOSE, 1L);
   }
 
   curl_easy_setopt(curl_handle_, CURLOPT_URL, url.c_str());
@@ -102,6 +104,14 @@ std::string RtdHttp::GetContent() {
   return content_;
 }
 
+long RtdHttp::GetHttpStatusCode() {
+  long http_code = -1;
+  if (curl_handle_) {
+    curl_easy_getinfo(curl_handle_, CURLINFO_RESPONSE_CODE, &http_code);
+  }
+  return http_code;
+}
+
 size_t RtdHttp::WriteMemory(void* data, size_t size, size_t count, void * param) {
   if (data == nullptr) {
     return 0;
@@ -113,10 +123,7 @@ size_t RtdHttp::WriteMemory(void* data, size_t size, size_t count, void * param)
   if (total_bytes > MAX_CONTENT_SIZE) {
     return data_bytes;
   }
-
-  rtd_http->content_.resize(total_bytes + 1);
-  memcpy((void*)(rtd_http->content_.c_str() + rtd_http->content_bytes_), data, data_bytes);
+  rtd_http->content_.append((const char*)data, data_bytes);
   rtd_http->content_bytes_ = total_bytes;
-  rtd_http->content_[rtd_http->content_bytes_] = 0;
   return data_bytes;
 }

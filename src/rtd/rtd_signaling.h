@@ -15,12 +15,14 @@ class RtdSignaling {
 
   void SetId(std::string& id) { request_id_ = id; }
   int ConnectAndWaitResponse(std::string& offer_sdp, std::string* answer_sdp);
+  int ConnectAndWaitResponseByWhip(std::string& offer_sdp, std::string* answer_sdp);
   std::string GetId();
 
  private:
   std::unique_ptr<RtdHttp> http_;
   std::string url_;
   std::string server_domain_;
+  std::string whip_server_domain_;
   std::string request_id_;
   std::string cid_;
   std::string uid_;

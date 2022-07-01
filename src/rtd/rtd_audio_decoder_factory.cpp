@@ -120,9 +120,9 @@ RtdAudioDecoderFactory::MakeAudioDecoder(const SdpAudioFormat& format,
                                                      false, false, false,
                                                      nullptr, 0);
   } else if (absl::EqualsIgnoreCase(format.name, "MP4A-LATM")) {
-    size_t channnel = format.num_channels;
-    size_t dec_hz = format.clockrate_hz;
-    size_t clockrate_hz = format.clockrate_hz;
+    uint32_t channnel = format.num_channels;
+    uint32_t dec_hz = format.clockrate_hz;
+    uint32_t clockrate_hz = format.clockrate_hz;
     
     bool is_cprsented = false;
     bool sbr_enabled = false;

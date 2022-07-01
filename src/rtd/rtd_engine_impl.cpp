@@ -399,7 +399,7 @@ void RtdEngineImpl::OnSdpOffer(std::string& sdp) {
     int64_t now_ntp_ms = clock_->CurrentNtpInMilliseconds();
     std::string now_str = rtc::MD5(rtc::ToString(now_ntp_ms));
     RTC_LOG(LS_INFO) << "RtcEngineImpl::now_str:" << now_str;
-    signaling_->ConnectAndWaitResponse(sdp, &answer_sdp);
+    signaling_->ConnectAndWaitResponseByWhip(sdp, &answer_sdp);
     SetAnswer(answer_sdp);
   }
 }

@@ -7,9 +7,11 @@
 namespace {
 
 constexpr int kDefaultSignalingTimeoutMs = 5000; // ms
+constexpr int kDefaultSignalingConnTimeoutMs = 2000; //ms
 constexpr char kSignalingServerDomain[] = "http://wecan-api.netease.im/v1/live/play";
-constexpr char kSdkVersion[] = "1.1.0";
-constexpr char kTestAppkey[] = "ab62e8c71f725f5ec391c4376923d9f4"; // for test, can change the value based on the actual situation
+constexpr char kWhipSignalingServerDomain[] = "https://wecan-api.netease.im/v1/whip/endpoint/play";
+constexpr char kSdkVersion[] = "1.2.0";
+constexpr char kTestAppkey[] = "c5057dc8294ed41e2f45cfd17ae83ac5"; // for test, can change the value based on the actual situation
 
 } // namespace
 
@@ -19,6 +21,7 @@ namespace rtd {
 RtdSignaling::RtdSignaling(const std::string& url)
     : url_(url),
       server_domain_(kSignalingServerDomain),
+      whip_server_domain_(kWhipSignalingServerDomain),
       request_id_(""),
       cid_(""),
       uid_(""),
@@ -32,7 +35,7 @@ RtdSignaling::~RtdSignaling() {
 
 int RtdSignaling::ConnectAndWaitResponse(std::string& offer_sdp, std::string* answer_sdp) {
   RTC_LOG(LS_INFO) << "RtdSignaling::ConnectAndWaitResponse";
-  http_.reset(new RtdHttp(server_domain_, timeout_ms_));
+  http_.reset(new RtdHttp(server_domain_, timeout_ms_, kDefaultSignalingConnTimeoutMs));
   if (!http_) {
     RTC_LOG(LS_ERROR) << "RtdSignaling::ConnectAndWaitResponse signaling instance is nullptr.";
     return -1;
@@ -105,6 +108,32 @@ int RtdSignaling::ConnectAndWaitResponse(std::string& offer_sdp, std::string* an
 
   http_.reset(nullptr);
   return code;
+}
+
+int RtdSignaling::ConnectAndWaitResponseByWhip(std::string& offer_sdp, std::string* answer_sdp) {
+  RTC_LOG(LS_INFO) << "RtdSignaling::ConnectAndWaitResponseByWhip";
+  std::string url = whip_server_domain_ + "?streamUri=" + url_ + "&appkey=" + kTestAppkey;
+  RTC_LOG(LS_INFO) << "RtdSignaling::ConnectAndWaitResponseByWhip url:" << url;
+  RtdHttp http(url, timeout_ms_, kDefaultSignalingConnTimeoutMs);
+  http.AddHeader("Content-Type", "application/sdp");
+  http.AddContent(true, "", offer_sdp);
+
+  int curl_code = http.DoEasy();
+  if (curl_code != 0) {
+    RTC_LOG(LS_ERROR) << "RtdSignaling::DoEasyPerform failed. code:" << curl_code;
+    return -1;
+  }
+
+  std::string content = http.GetContent();
+  RTC_LOG(LS_INFO) << "RtdSignaling::DoEasyPerform success. content:" << content;
+  long http_status_code = http.GetHttpStatusCode();
+  RTC_LOG(LS_INFO) << "RtdSignaling::DoEasyPerform success. http_status_code:" << http_status_code;
+  if (http_status_code == 201) {
+    *answer_sdp = content;
+  } else {
+    return http_status_code;
+  }
+  return 200;
 }
 
 } // namespace rtd

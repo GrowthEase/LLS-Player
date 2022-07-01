@@ -68,7 +68,7 @@ bool SdpAudioFormat::IsCPresented() const {
 }
 
 
-bool SdpAudioFormat::GetInfoFromConfig(size_t& channels, size_t& sample_rate,
+bool SdpAudioFormat::GetInfoFromConfig(uint32_t& channels, uint32_t& sample_rate,
                                        bool& sbr_enabled, bool& ps_enabled,
                                        rtc::BufferT<uint8_t>& extra_data) const {
   bool is_ok = false;
@@ -112,7 +112,7 @@ const int aac_frequency_list[] = {
 };
 
 bool SdpAudioFormat::GetInfoFromConfigInternal(uint8_t* data, size_t len,
-                                               size_t& channels, size_t& sample_rate,
+                                               uint32_t& channels, uint32_t& sample_rate,
                                                bool& sbr_enabled, bool& ps_enabled) const {
   rtc::BitBuffer bb(data, len);  
   std::string desc;

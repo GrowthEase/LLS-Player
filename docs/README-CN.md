@@ -9,6 +9,7 @@ SDK提供了一套简单易用的接口，允许开发者通过调用SDK的API�
 - 低延时拉流，同时具有高抗弱网性能
 - 支持OPUS和AAC，其中AAC支持ADTS，LATM，包括AAC-LC、AAC-HE、AAC-HEv2
 - 支持H264
+- 支持WHIP
 - 视频回调H264码流，音频回调PCM数据
 - 支持Windows平台
 

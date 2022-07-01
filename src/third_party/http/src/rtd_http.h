@@ -8,7 +8,7 @@ struct curl_slist;
 class RtdHttp
 {
 public:
-	RtdHttp(const std::string& url, int timeout);
+	RtdHttp(const std::string& url, int timeout, int conn_timeout_ms);
 	~RtdHttp();
 	bool IsInitialized() { return initialized_; }
 
@@ -17,6 +17,7 @@ public:
 	void SetSharedHandler();
 	int  DoEasy();
 	std::string GetContent();
+	long GetHttpStatusCode();
 
 private:
 	static size_t WriteMemory(void *data, size_t size, size_t count, void* param);

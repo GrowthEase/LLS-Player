@@ -28,7 +28,7 @@ StreamSynchronization::StreamSynchronization(uint32_t video_stream_id,
                                              uint32_t audio_stream_id)
     : video_stream_id_(video_stream_id),
       audio_stream_id_(audio_stream_id),
-      base_target_delay_ms_(500),
+      base_target_delay_ms_(200),
       avg_diff_ms_(0) {}
 
 bool StreamSynchronization::ComputeRelativeDelay(

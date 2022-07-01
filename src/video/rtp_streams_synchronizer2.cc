@@ -24,9 +24,9 @@ namespace {
 // Time interval for logging stats.
 constexpr int64_t kStatsLogIntervalMs = 10000;
 constexpr TimeDelta kSyncInterval = TimeDelta::Millis(1000);
-constexpr int64_t kBaseTargetDelayMs = 500;
-constexpr int64_t kAudioStartDelayMs = 500;
-constexpr int64_t kVideoStartDelayMs = 500;
+constexpr int64_t kBaseTargetDelayMs = 200;
+constexpr int64_t kAudioStartDelayMs = 200;
+constexpr int64_t kVideoStartDelayMs = 200;
 
 bool UpdateMeasurements(StreamSynchronization::Measurements* stream,
                         const Syncable::Info& info) {

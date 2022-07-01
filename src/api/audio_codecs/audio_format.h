@@ -58,11 +58,11 @@ struct RTC_EXPORT SdpAudioFormat {
 
   //related to latm:
   bool IsCPresented() const;  
-  bool GetInfoFromConfig(size_t& channels, size_t& sample_rate, 
+  bool GetInfoFromConfig(uint32_t& channels, uint32_t& sample_rate, 
                          bool& sbr_enabled, bool& ps_enabled,
                          rtc::BufferT<uint8_t>& extra_data) const;
   bool GetInfoFromConfigInternal(uint8_t* data, size_t len, 
-                                 size_t& channels, size_t& sample_rate,
+                                 uint32_t& channels, uint32_t& sample_rate,
                                  bool& sbr_enabled, bool& ps_enabled) const;
 
   std::string name;
