@@ -93,7 +93,7 @@ ijkplayer/android/contrib/build/ffmpeg-$arch/output/include
 
 修改 android/ijkplayer/ijkplayer-$arch/src/main/jni/ffmpeg/[Android.mk](http://android.mk/)文件，如下图所示：
 
-![](C:./ijkplayer-makefile-modify.png)
+![](./ijkplayer-makefile-modify.png)
 
 ### 添加FFMPEG插件代码和动态库依赖
 
@@ -101,7 +101,7 @@ ijkplayer/android/contrib/build/ffmpeg-$arch/output/include
 
 将rtd_dec.c文件拷贝到工程的源码目录下参与编译，（具体位置可以自己指定），例如ijkplayer中放到ijkavformat目录下。修改ijkplayer/ijkmedia/ijkplayer/[Android.mk](
 
-![](C:./ijkplayer-aos-makefile-modify.png)
+![](./ijkplayer-aos-makefile-modify.png)
 
 ### SDK接入修改
 
