@@ -48,7 +48,9 @@ Directly put the src/rtd/ffmpeg/rtd_dec.c file and SDK dynamic library(rtd.dll) 
 ## **Overview of Integration Methods**
 
 [Windows Integration](https://github.com/GrowthEase/LLS-Player/blob/main/docs/Windows集成简介.md)
+
 [iOS Integration](https://github.com/GrowthEase/LLS-Player/blob/main/docs/iOS集成简介.md)
+
 [Android Integration](https://github.com/GrowthEase/LLS-Player/blob/main/docs/Android集成简介.md)
 
 [Introduction in Chinese](https://github.com/GrowthEase/LLS-Player/blob/main/docs/README-CN.md)
