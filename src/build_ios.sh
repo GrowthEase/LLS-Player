@@ -40,13 +40,6 @@ gnargs+='rtc_enable_protobuf=false is_component_build=false rtc_build_tools=fals
 gnargs+='rtc_enable_sctp=false rtc_enable_avx2=false rtc_include_ilbc=false '
 gnargs+='use_rtti=true  '
 
-#open_source ios by mingsong
-#gnargs=' target_os="ios" enable_ios_bitcode=true ios_enable_code_signing=false enable_stripping=true '
-#gnargs+='ios_deployment_target="9.0" rtc_use_h264=true rtc_include_internal_audio_device=false '
-#gnargs+='rtc_enable_avx2=false rtc_include_ilbc=false '
-#gnargs+='rtc_build_examples=false rtc_build_tools=false rtc_enable_protobuf=false rtc_enable_sctp=false rtc_include_tests=false'
-
-
 
 echo $gnargs
 

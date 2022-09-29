@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B33FA9728581E7A00FAD510 /* rtd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B33FA8C28581E7A00FAD510 /* rtd.framework */; };
+		0B33FA9D28581E7A00FAD510 /* rtd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FA8F28581E7A00FAD510 /* rtd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B33FABC2858215200FAD510 /* rtd_engine_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAA62858215200FAD510 /* rtd_engine_interface.h */; };
+		0B33FABD2858215200FAD510 /* rtd_demuxer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAA72858215200FAD510 /* rtd_demuxer.h */; };
+		0B33FABE2858215200FAD510 /* rtd_log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAA82858215200FAD510 /* rtd_log.cpp */; };
+		0B33FABF2858215200FAD510 /* rtd_signaling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAA92858215200FAD510 /* rtd_signaling.cpp */; };
+		0B33FAC02858215200FAD510 /* rtd_engine_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAAA2858215200FAD510 /* rtd_engine_interface.cpp */; };
+		0B33FAC12858215200FAD510 /* rtd_signaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAAB2858215200FAD510 /* rtd_signaling.h */; };
+		0B33FAC22858215200FAD510 /* rtd_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAAC2858215200FAD510 /* rtd_api.cpp */; };
+		0B33FAC32858215200FAD510 /* rtd_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAAD2858215200FAD510 /* rtd_internal.h */; };
+		0B33FAC42858215200FAD510 /* rtd_video_decoder_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAAE2858215200FAD510 /* rtd_video_decoder_factory.cpp */; };
+		0B33FAC52858215200FAD510 /* rtd_api_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAAF2858215200FAD510 /* rtd_api_impl.cpp */; };
+		0B33FAC62858215200FAD510 /* rtd_audio_decoder_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB02858215200FAD510 /* rtd_audio_decoder_factory.h */; };
+		0B33FAC72858215200FAD510 /* rtd_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB12858215200FAD510 /* rtd_api.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B33FAC82858215200FAD510 /* rtd_frame_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB22858215200FAD510 /* rtd_frame_queue.h */; };
+		0B33FAC92858215200FAD510 /* rtd_video_decoder_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB32858215200FAD510 /* rtd_video_decoder_factory.h */; };
+		0B33FACA2858215200FAD510 /* rtd_audio_decoder_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAB42858215200FAD510 /* rtd_audio_decoder_factory.cpp */; };
+		0B33FACB2858215200FAD510 /* rtd_engine_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB52858215200FAD510 /* rtd_engine_impl.h */; };
+		0B33FACC2858215200FAD510 /* rtd_api_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB62858215200FAD510 /* rtd_api_impl.h */; };
+		0B33FACD2858215200FAD510 /* rtd_engine_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAB72858215200FAD510 /* rtd_engine_impl.cpp */; };
+		0B33FACE2858215200FAD510 /* rtd_def.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FAB82858215200FAD510 /* rtd_def.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B33FACF2858215200FAD510 /* rtd_frame_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FAB92858215200FAD510 /* rtd_frame_queue.cpp */; };
+		0B33FAD02858215200FAD510 /* rtd_demuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FABA2858215200FAD510 /* rtd_demuxer.cpp */; };
+		0B33FAD12858215200FAD510 /* rtd_log.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B33FABB2858215200FAD510 /* rtd_log.h */; };
+		0B33FAD628587DE700FAD510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B33FAD528587DE700FAD510 /* Foundation.framework */; };
+		0B33FB07285B144500FAD510 /* rtd.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B33FB06285B144500FAD510 /* rtd.docc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B33FA9828581E7A00FAD510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B33FA8328581E7A00FAD510 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B33FA8B28581E7A00FAD510;
+			remoteInfo = rtd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B33FA8C28581E7A00FAD510 /* rtd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = rtd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B33FA8F28581E7A00FAD510 /* rtd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rtd.h; sourceTree = "<group>"; };
+		0B33FA9628581E7A00FAD510 /* rtdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rtdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B33FAA62858215200FAD510 /* rtd_engine_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_engine_interface.h; path = ../../../src/rtd_engine_interface.h; sourceTree = "<group>"; };
+		0B33FAA72858215200FAD510 /* rtd_demuxer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_demuxer.h; path = ../../../src/rtd_demuxer.h; sourceTree = "<group>"; };
+		0B33FAA82858215200FAD510 /* rtd_log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_log.cpp; path = ../../../src/rtd_log.cpp; sourceTree = "<group>"; };
+		0B33FAA92858215200FAD510 /* rtd_signaling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_signaling.cpp; path = ../../../src/rtd_signaling.cpp; sourceTree = "<group>"; };
+		0B33FAAA2858215200FAD510 /* rtd_engine_interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_engine_interface.cpp; path = ../../../src/rtd_engine_interface.cpp; sourceTree = "<group>"; };
+		0B33FAAB2858215200FAD510 /* rtd_signaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_signaling.h; path = ../../../src/rtd_signaling.h; sourceTree = "<group>"; };
+		0B33FAAC2858215200FAD510 /* rtd_api.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_api.cpp; path = ../../../src/rtd_api.cpp; sourceTree = "<group>"; };
+		0B33FAAD2858215200FAD510 /* rtd_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_internal.h; path = ../../../src/rtd_internal.h; sourceTree = "<group>"; };
+		0B33FAAE2858215200FAD510 /* rtd_video_decoder_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_video_decoder_factory.cpp; path = ../../../src/rtd_video_decoder_factory.cpp; sourceTree = "<group>"; };
+		0B33FAAF2858215200FAD510 /* rtd_api_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_api_impl.cpp; path = ../../../src/rtd_api_impl.cpp; sourceTree = "<group>"; };
+		0B33FAB02858215200FAD510 /* rtd_audio_decoder_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_audio_decoder_factory.h; path = ../../../src/rtd_audio_decoder_factory.h; sourceTree = "<group>"; };
+		0B33FAB12858215200FAD510 /* rtd_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_api.h; path = ../../../src/rtd_api.h; sourceTree = "<group>"; };
+		0B33FAB22858215200FAD510 /* rtd_frame_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_frame_queue.h; path = ../../../src/rtd_frame_queue.h; sourceTree = "<group>"; };
+		0B33FAB32858215200FAD510 /* rtd_video_decoder_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_video_decoder_factory.h; path = ../../../src/rtd_video_decoder_factory.h; sourceTree = "<group>"; };
+		0B33FAB42858215200FAD510 /* rtd_audio_decoder_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_audio_decoder_factory.cpp; path = ../../../src/rtd_audio_decoder_factory.cpp; sourceTree = "<group>"; };
+		0B33FAB52858215200FAD510 /* rtd_engine_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_engine_impl.h; path = ../../../src/rtd_engine_impl.h; sourceTree = "<group>"; };
+		0B33FAB62858215200FAD510 /* rtd_api_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_api_impl.h; path = ../../../src/rtd_api_impl.h; sourceTree = "<group>"; };
+		0B33FAB72858215200FAD510 /* rtd_engine_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_engine_impl.cpp; path = ../../../src/rtd_engine_impl.cpp; sourceTree = "<group>"; };
+		0B33FAB82858215200FAD510 /* rtd_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_def.h; path = ../../../src/rtd_def.h; sourceTree = "<group>"; };
+		0B33FAB92858215200FAD510 /* rtd_frame_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_frame_queue.cpp; path = ../../../src/rtd_frame_queue.cpp; sourceTree = "<group>"; };
+		0B33FABA2858215200FAD510 /* rtd_demuxer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtd_demuxer.cpp; path = ../../../src/rtd_demuxer.cpp; sourceTree = "<group>"; };
+		0B33FABB2858215200FAD510 /* rtd_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtd_log.h; path = ../../../src/rtd_log.h; sourceTree = "<group>"; };
+		0B33FAD528587DE700FAD510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B33FB06285B144500FAD510 /* rtd.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = rtd.docc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B33FA8928581E7A00FAD510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33FAD628587DE700FAD510 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33FA9328581E7A00FAD510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33FA9728581E7A00FAD510 /* rtd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B33FA8228581E7A00FAD510 = {
+			isa = PBXGroup;
+			children = (
+				0B33FA8E28581E7A00FAD510 /* rtd */,
+				0B33FA8D28581E7A00FAD510 /* Products */,
+				0B33FAD428587DE600FAD510 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B33FA8D28581E7A00FAD510 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B33FA8C28581E7A00FAD510 /* rtd.framework */,
+				0B33FA9628581E7A00FAD510 /* rtdTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B33FA8E28581E7A00FAD510 /* rtd */ = {
+			isa = PBXGroup;
+			children = (
+				0B33FAAF2858215200FAD510 /* rtd_api_impl.cpp */,
+				0B33FAB62858215200FAD510 /* rtd_api_impl.h */,
+				0B33FAAC2858215200FAD510 /* rtd_api.cpp */,
+				0B33FAB12858215200FAD510 /* rtd_api.h */,
+				0B33FAB02858215200FAD510 /* rtd_audio_decoder_factory.h */,
+				0B33FAB82858215200FAD510 /* rtd_def.h */,
+				0B33FABA2858215200FAD510 /* rtd_demuxer.cpp */,
+				0B33FAA72858215200FAD510 /* rtd_demuxer.h */,
+				0B33FAB42858215200FAD510 /* rtd_audio_decoder_factory.cpp */,
+				0B33FAB72858215200FAD510 /* rtd_engine_impl.cpp */,
+				0B33FAB52858215200FAD510 /* rtd_engine_impl.h */,
+				0B33FAAA2858215200FAD510 /* rtd_engine_interface.cpp */,
+				0B33FAA62858215200FAD510 /* rtd_engine_interface.h */,
+				0B33FAB92858215200FAD510 /* rtd_frame_queue.cpp */,
+				0B33FAB22858215200FAD510 /* rtd_frame_queue.h */,
+				0B33FAAD2858215200FAD510 /* rtd_internal.h */,
+				0B33FAA82858215200FAD510 /* rtd_log.cpp */,
+				0B33FABB2858215200FAD510 /* rtd_log.h */,
+				0B33FAA92858215200FAD510 /* rtd_signaling.cpp */,
+				0B33FAAB2858215200FAD510 /* rtd_signaling.h */,
+				0B33FAAE2858215200FAD510 /* rtd_video_decoder_factory.cpp */,
+				0B33FAB32858215200FAD510 /* rtd_video_decoder_factory.h */,
+				0B33FA8F28581E7A00FAD510 /* rtd.h */,
+				0B33FB06285B144500FAD510 /* rtd.docc */,
+			);
+			path = rtd;
+			sourceTree = "<group>";
+		};
+		0B33FAD428587DE600FAD510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B33FAD528587DE700FAD510 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B33FA8728581E7A00FAD510 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33FACC2858215200FAD510 /* rtd_api_impl.h in Headers */,
+				0B33FAC72858215200FAD510 /* rtd_api.h in Headers */,
+				0B33FACE2858215200FAD510 /* rtd_def.h in Headers */,
+				0B33FAD12858215200FAD510 /* rtd_log.h in Headers */,
+				0B33FAC62858215200FAD510 /* rtd_audio_decoder_factory.h in Headers */,
+				0B33FABD2858215200FAD510 /* rtd_demuxer.h in Headers */,
+				0B33FA9D28581E7A00FAD510 /* rtd.h in Headers */,
+				0B33FAC92858215200FAD510 /* rtd_video_decoder_factory.h in Headers */,
+				0B33FAC12858215200FAD510 /* rtd_signaling.h in Headers */,
+				0B33FABC2858215200FAD510 /* rtd_engine_interface.h in Headers */,
+				0B33FAC32858215200FAD510 /* rtd_internal.h in Headers */,
+				0B33FACB2858215200FAD510 /* rtd_engine_impl.h in Headers */,
+				0B33FAC82858215200FAD510 /* rtd_frame_queue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B33FA8B28581E7A00FAD510 /* rtd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B33FAA028581E7A00FAD510 /* Build configuration list for PBXNativeTarget "rtd" */;
+			buildPhases = (
+				0B33FA8728581E7A00FAD510 /* Headers */,
+				0B33FA8828581E7A00FAD510 /* Sources */,
+				0B33FA8928581E7A00FAD510 /* Frameworks */,
+				0B33FA8A28581E7A00FAD510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rtd;
+			productName = rtd;
+			productReference = 0B33FA8C28581E7A00FAD510 /* rtd.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0B33FA9528581E7A00FAD510 /* rtdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B33FAA328581E7A00FAD510 /* Build configuration list for PBXNativeTarget "rtdTests" */;
+			buildPhases = (
+				0B33FA9228581E7A00FAD510 /* Sources */,
+				0B33FA9328581E7A00FAD510 /* Frameworks */,
+				0B33FA9428581E7A00FAD510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B33FA9928581E7A00FAD510 /* PBXTargetDependency */,
+			);
+			name = rtdTests;
+			productName = rtdTests;
+			productReference = 0B33FA9628581E7A00FAD510 /* rtdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B33FA8328581E7A00FAD510 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					0B33FA8B28581E7A00FAD510 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					0B33FA9528581E7A00FAD510 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0B33FA8628581E7A00FAD510 /* Build configuration list for PBXProject "rtd" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B33FA8228581E7A00FAD510;
+			productRefGroup = 0B33FA8D28581E7A00FAD510 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B33FA8B28581E7A00FAD510 /* rtd */,
+				0B33FA9528581E7A00FAD510 /* rtdTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B33FA8A28581E7A00FAD510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33FA9428581E7A00FAD510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B33FA8828581E7A00FAD510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33FACD2858215200FAD510 /* rtd_engine_impl.cpp in Sources */,
+				0B33FAC22858215200FAD510 /* rtd_api.cpp in Sources */,
+				0B33FAC02858215200FAD510 /* rtd_engine_interface.cpp in Sources */,
+				0B33FAC52858215200FAD510 /* rtd_api_impl.cpp in Sources */,
+				0B33FABE2858215200FAD510 /* rtd_log.cpp in Sources */,
+				0B33FACF2858215200FAD510 /* rtd_frame_queue.cpp in Sources */,
+				0B33FACA2858215200FAD510 /* rtd_audio_decoder_factory.cpp in Sources */,
+				0B33FAC42858215200FAD510 /* rtd_video_decoder_factory.cpp in Sources */,
+				0B33FAD02858215200FAD510 /* rtd_demuxer.cpp in Sources */,
+				0B33FABF2858215200FAD510 /* rtd_signaling.cpp in Sources */,
+				0B33FB07285B144500FAD510 /* rtd.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33FA9228581E7A00FAD510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B33FA9928581E7A00FAD510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B33FA8B28581E7A00FAD510 /* rtd */;
+			targetProxy = 0B33FA9828581E7A00FAD510 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B33FA9E28581E7A00FAD510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B33FA9F28581E7A00FAD510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0B33FAA128581E7A00FAD510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					WEBRTC_POSIX,
+					WEBRTC_IOS,
+					WEBRTC_MAC,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../,
+					"../../..//third_party/abseil-cpp",
+					../../../third_party/opus/src/include,
+					../../src,
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = out/lib;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-lwebrtc",
+					"-lcurl",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.commease.rtd;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B33FAA228581E7A00FAD510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					WEBRTC_POSIX,
+					WEBRTC_IOS,
+					WEBRTC_MAC,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../,
+					"../../..//third_party/abseil-cpp",
+					../../../third_party/opus/src/include,
+					../../src,
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = out/lib;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-lwebrtc",
+					"-lcurl",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.commease.rtd;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B33FAA428581E7A00FAD510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7C9A6NRV5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = commease.rtdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B33FAA528581E7A00FAD510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7C9A6NRV5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = commease.rtdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B33FA8628581E7A00FAD510 /* Build configuration list for PBXProject "rtd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B33FA9E28581E7A00FAD510 /* Debug */,
+				0B33FA9F28581E7A00FAD510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B33FAA028581E7A00FAD510 /* Build configuration list for PBXNativeTarget "rtd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B33FAA128581E7A00FAD510 /* Debug */,
+				0B33FAA228581E7A00FAD510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B33FAA328581E7A00FAD510 /* Build configuration list for PBXNativeTarget "rtdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B33FAA428581E7A00FAD510 /* Debug */,
+				0B33FAA528581E7A00FAD510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B33FA8328581E7A00FAD510 /* Project object */;
+}

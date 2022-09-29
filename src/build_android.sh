@@ -50,7 +50,7 @@ function build_arm64() {
 	echo $OUT_DIR
 	mkdir -p $OUT_DIR
 	cd $OUT_DIR
-	cmake ${ROOT_DIR}/rtd \
+	cmake ${ROOT_DIR}/rtd/src \
 	-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
 	-DANDROID_ARM_MODE=arm \
 	-DANDROID_ABI=arm64-v8a \
@@ -68,7 +68,7 @@ function build_arm32() {
 	echo $OUT_DIR
 	mkdir -p $OUT_DIR
 	cd $OUT_DIR
-	cmake ${ROOT_DIR}/rtd \
+	cmake ${ROOT_DIR}/rtd/src \
 	-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
 	-DANDROID_ARM_MODE=arm \
 	-DANDROID_ABI=armeabi-v7a \
@@ -86,7 +86,7 @@ function build_x64() {
 	echo $OUT_DIR
 	mkdir -p $OUT_DIR
 	cd $OUT_DIR
-	cmake ${ROOT_DIR}/rtd \
+	cmake ${ROOT_DIR}/rtd/src \
 	-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
 	-DANDROID_ABI=x86_64 \
 	-DANDROID_PLATFORM=android-21 \
@@ -103,7 +103,7 @@ function build_x86() {
 	echo $OUT_DIR
 	mkdir -p $OUT_DIR
 	cd $OUT_DIR
-	cmake ${ROOT_DIR}/rtd \
+	cmake ${ROOT_DIR}/rtd/src \
 	-DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake \
 	-DANDROID_ABI=x86 \
 	-DANDROID_PLATFORM=android-21 \

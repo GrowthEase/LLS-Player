@@ -7,7 +7,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "libavformat/avformat.h"
+#ifndef WIN32
 #include "libavformat/url.h"
+#endif
 #include "libavutil/opt.h"
 #include "libavutil/log.h"
 #include "libavutil/time.h"
@@ -485,12 +487,13 @@ static int rtd_read_header(AVFormatContext *s){
   }
 
   for (int i = 0; i < RECV_STREAM_INFO_TIMEOUT / STREAM_INFO_QUERY_INTERVAL; i++) {
+#ifndef WIN32
     if (ff_check_interrupt(&s->interrupt_callback)) {
      av_log(s, AV_LOG_INFO, "user interrupted\n");
      ret = AVERROR_EXIT;
      goto out;
     }
-
+#endif
     pthread_mutex_lock(&rtd->media_info_mutex);
     int64_t time = av_gettime() + STREAM_INFO_QUERY_INTERVAL*1000;
     struct timespec timeout = { .tv_sec = time / 1000000, .tv_nsec = (time % 1000000) * 1000 };
@@ -520,11 +523,12 @@ static int rtd_read_packet(AVFormatContext *s, AVPacket *pkt) {
 
   RtdContext* rtd = s->priv_data;
   int ret = AVERROR(0);
+#ifndef WIN32
   if (ff_check_interrupt(&s->interrupt_callback)) {
    av_log(s, AV_LOG_INFO, "user exit in read packet!\n");
    return AVERROR_EXIT;
   }
-
+#endif
   struct RtdFrame *frame = NULL;
   if (rtd->rtd_funcs) {
     ret = rtd->rtd_funcs->read(&frame, rtd->rtd_handler);
