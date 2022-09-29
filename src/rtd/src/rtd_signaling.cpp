@@ -9,9 +9,9 @@ namespace {
 constexpr int kDefaultSignalingTimeoutMs = 5000; // ms
 constexpr int kDefaultSignalingConnTimeoutMs = 2000; //ms
 constexpr char kSignalingServerDomain[] = "http://wecan-api.netease.im/v1/live/play";
-constexpr char kWhipSignalingServerDomain[] = "https://roomserver-greytest.netease.im/v1/whip/endpoint/play";
+constexpr char kWhipSignalingServerDomain[] = "https://wecan-api.netease.im/v1/whip/endpoint/play";
 constexpr char kSdkVersion[] = "1.2.0";
-constexpr char kTestAppkey[] = "9f9faeaa43f4593ace13b5bfa22c2bb4"; // for test, can change the value based on the actual situation
+constexpr char kTestAppkey[] = "c5057dc8294ed41e2f45cfd17ae83ac5"; // for test, can change the value based on the actual situation
 
 } // namespace
 
