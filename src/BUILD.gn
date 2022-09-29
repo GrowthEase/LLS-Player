@@ -456,9 +456,15 @@ if (!build_with_chromium) {
     deps = [
       ":webrtc",
       "//modules/audio_coding:webrtc_opus",
-      "//third_party/jsoncpp:jsoncpp",
-      "//third_party/http:rtd_http",
+
     ]
+
+    if (is_win) {
+      deps += [
+        "//third_party/jsoncpp:jsoncpp",
+        "//third_party/http:rtd_http",
+      ]
+    }
   }
   rtc_static_library("webrtc") {
     # Only the root target and the test should depend on this.
@@ -499,6 +505,13 @@ if (!build_with_chromium) {
       "sdk",
       "video",
     ]
+
+    if (is_ios || is_android) {
+      deps += [
+        "//third_party/jsoncpp:jsoncpp",
+        "//third_party/http:rtd_http",
+      ]
+    }
 
     if (rtc_include_builtin_audio_codecs) {
       deps += [

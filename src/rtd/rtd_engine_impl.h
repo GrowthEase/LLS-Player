@@ -89,7 +89,7 @@ class RtdEngineImpl : public PeerConnectionObserver,
   std::string url_;
   RtdSinkInterface* sink_;
   Clock* const clock_;
-  rtc::AsyncInvoker invoker_;
+  //rtc::AsyncInvoker invoker_;
   rtc::TimestampWrapAroundHandler timestamp_wraparound_handler_;
   std::unique_ptr<RtdSignaling> signaling_;
   bool stream_info_parsed_;

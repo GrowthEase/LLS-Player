@@ -114,6 +114,15 @@ public:
     virtual int32_t EnableBuiltInAEC(bool enable) override { return -1; }
     virtual int32_t EnableBuiltInAGC(bool enable) override { return -1; }
     virtual int32_t EnableBuiltInNS(bool enable) override { return -1; }
+    
+    
+    // Only supported on iOS.
+#if defined(WEBRTC_IOS)
+    virtual int GetPlayoutAudioParameters(AudioParameters* params) const override  { return -1; }
+    virtual int GetRecordAudioParameters(AudioParameters* params) const override { return -1; }
+#endif  // WEBRTC_IOS
+    
+    
 };
 
 } // namespace webrtc

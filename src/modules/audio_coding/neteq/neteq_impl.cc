@@ -211,7 +211,20 @@ int NetEqImpl::InsertPacket(const RTPHeader& rtp_header,
   }
 
   // deal with aac 44100 clockrate_hz
-  auto format = GetDecoderFormat(header.payloadType);
+  absl::optional<NetEq::DecoderFormat> format = absl::nullopt;
+  {
+    const DecoderDatabase::DecoderInfo* const di =
+        decoder_database_->GetDecoderInfo(header.payloadType);
+    if (di) {
+      const AudioDecoder* const decoder = di->GetDecoder();
+      // TODO(kwiberg): Why the special case for RED?
+      format = DecoderFormat{
+          /*sample_rate_hz=*/di->IsRed() ? 8000 : di->SampleRateHz(),
+          /*num_channels=*/
+          decoder ? rtc::dchecked_cast<int>(decoder->Channels()) : 1,
+          /*sdp_format=*/di->GetFormat()};
+    }
+  }
   if (format && absl::EqualsIgnoreCase(format->sdp_format.name, "MP4A-ADTS")) {
     // Parse adts
     if (payload[0] == 0xff && ((payload[1] & 0xf0) == 0xf0)) {

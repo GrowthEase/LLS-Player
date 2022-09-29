@@ -14,4 +14,8 @@ static_library("rtd_http") {
       libs = [ "libcurl.lib" ]
     }
   }
+  if (is_ios) {
+    lib_dirs = [ "libcurl/libs/ios" ]
+    libs = [ "libcurl.a" ]
+  }
 }

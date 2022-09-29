@@ -79,9 +79,13 @@ Accelerate::ReturnCodes Accelerate::CheckCriteriaAndStretch(
     // Cross-fade `temp_vector` onto the end of `output`.
     output->CrossFade(temp_vector, peak_index);
     // Copy the last unmodified part, 15 ms + pitch period until the end.
-    output->PushBackInterleaved(rtc::ArrayView<const int16_t>(
-        &input[(fs_mult_120 + peak_index) * num_channels_],
-        input_length - (fs_mult_120 + peak_index) * num_channels_));
+    uint32_t last_unmodified_part =
+        input_length - (fs_mult_120 + peak_index) * num_channels_;
+    if (last_unmodified_part > 0) {
+      output->PushBackInterleaved(rtc::ArrayView<const int16_t>(
+          &input[(fs_mult_120 + peak_index) * num_channels_],
+          last_unmodified_part));
+    }
 
     if (active_speech) {
       return kSuccess;

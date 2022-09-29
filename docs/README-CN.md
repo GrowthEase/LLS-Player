@@ -11,7 +11,7 @@ SDK提供了一套简单易用的接口，允许开发者通过调用SDK的API�
 - 支持H264
 - 支持WHIP
 - 视频回调H264码流，音频回调PCM数据
-- 支持Windows平台
+- 支持Windows、iOS、Android平台
 
 
 
@@ -42,6 +42,10 @@ SDK主要分为3个模块：
 ## 集成方法概述
 
 [Windows集成方式](https://github.com/GrowthEase/LLS-Player/blob/main/docs/Windows集成简介.md)
+
+[iOS集成方式](https://github.com/GrowthEase/LLS-Player/blob/main/docs/iOS集成简介.md)
+
+[Android集成方式](https://github.com/GrowthEase/LLS-Player/blob/main/docs/Android集成简介.md)
 
 
 ## 扫码添加网易智企开源小助理
