@@ -50,4 +50,4 @@ SDK主要分为3个模块：
 
 ## 扫码加入交流群
 
-[社群二维码]（https://github.com/GrowthEase/LLS-Player/blob/main/images/%E7%A4%BE%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg）
+[社群二维码](https://github.com/GrowthEase/LLS-Player/blob/main/images/%E7%A4%BE%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
