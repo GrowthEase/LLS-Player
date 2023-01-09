@@ -103,13 +103,6 @@ absl::optional<VideoRtpDepacketizer::ParsedRtpPayload> ProcessStapAOrSingleNalu(
     h264_header.packetization_type = kH264StapA;
     nal_type = payload_data[kStapAHeaderSize] & kTypeMask;
   } else {
-    if(nal_type == H264::NaluType::kIdr 
-      || nal_type == H264::NaluType::kSlice) {
-      parsed_payload->video_header.is_real_first_packet_in_frame = H264BitstreamParser::IsFirstSliceInFrame(payload_data, rtp_payload.size());
-    } else {
-      parsed_payload->video_header.is_real_first_packet_in_frame = true;
-    }
-
     h264_header.packetization_type = kH264SingleNalu;
     nalu_start_offsets.push_back(0);
   }
@@ -132,17 +125,16 @@ absl::optional<VideoRtpDepacketizer::ParsedRtpPayload> ProcessStapAOrSingleNalu(
     nalu.type = payload_data[start_offset] & kTypeMask;
     nalu.sps_id = -1;
     nalu.pps_id = -1;
-    start_offset += H264::kNaluTypeSize;
 
     //first nal
-    if(stapA_mode && i == 0) {
+    if(!i) {
       if(nalu.type == H264::NaluType::kIdr 
         || nalu.type == H264::NaluType::kSlice) {
         parsed_payload->video_header.is_real_first_packet_in_frame = H264BitstreamParser::IsFirstSliceInFrame(&payload_data[start_offset], end_offset - start_offset);
-      } else {
-        parsed_payload->video_header.is_real_first_packet_in_frame = true;
       }
     }
+
+    start_offset += H264::kNaluTypeSize;
 
     switch (nalu.type) {
       case H264::NaluType::kSps: {
